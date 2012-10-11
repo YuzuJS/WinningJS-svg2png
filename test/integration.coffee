@@ -37,6 +37,13 @@ specify "Integration test", (done) =>
                 "2.scale-180.png"
                 "2.scale-80.png"
             ])
+
+            pngs.forEach (png) =>
+                expected = fs.readFileSync(relative("images/expected/" + png)).toString()
+                actual = fs.readFileSync(relative("images/" + png)).toString()
+
+                actual.should.equal(expected)
+
             done()
         catch err
             done(err)
