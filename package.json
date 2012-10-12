@@ -1,6 +1,7 @@
 {
     "name": "winningjs-svg2png",
-    "description": "A Grunt build task for converting SVG files to PNG images in the varieties desired by Windows 8.",
+    "description": "A Grunt build task for converting SVGs to PNGs in the varieties desired by Windows 8.",
+    "keywords": ["gruntplugin", "windows8", "winjs", "winningjs", "svg", "png", "images"],
     "version": "1.0.0",
     "author": "Domenic Denicola <domenic@domenicdenicola.com> (http://domenicdenicola.com)",
     "license": "WTFPL",
@@ -20,7 +21,7 @@
         "lint": "jshint tasks && jshint lib"
     },
     "dependencies": {
-        "phantomjs": ">= 0.2.0",
+        "svg2png": ">= 1.0.0",
         "q": ">= 0.8.9"
     },
     "devDependencies": {
