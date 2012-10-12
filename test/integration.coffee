@@ -28,14 +28,14 @@ specify "Integration test", (done) =>
 
         try
             pngs.sort().should.deep.equal([
-                "1.scale-100.png"
-                "1.scale-140.png"
-                "1.scale-180.png"
-                "1.scale-80.png"
-                "2.scale-100.png"
-                "2.scale-140.png"
-                "2.scale-180.png"
-                "2.scale-80.png"
+                "1.scale-100.svg.png"
+                "1.scale-140.svg.png"
+                "1.scale-180.svg.png"
+                "1.scale-80.svg.png"
+                "2.scale-100.svg.png"
+                "2.scale-140.svg.png"
+                "2.scale-180.svg.png"
+                "2.scale-80.svg.png"
             ])
 
             pngs.forEach (png) =>
