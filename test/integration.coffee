@@ -11,8 +11,8 @@ isPng = (fileName) => path.extname(fileName).toLowerCase() is ".png"
 
 doTask = (afterRun) =>
     grunt.task.loadTasks(relative("../tasks"))
-    grunt.initConfig("winningJS-svg2png": [relative("images/*.svg")])
-    grunt.task.run("winningJS-svg2png").start()
+    grunt.initConfig("WinningJS-svg2png": [relative("images/*.svg")])
+    grunt.task.run("WinningJS-svg2png").start()
     grunt.task.options({ done: afterRun })
 
 after =>
