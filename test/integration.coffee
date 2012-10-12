@@ -25,18 +25,10 @@ specify "Integration test", (done) =>
     doTask =>
         files = fs.readdirSync(relative("images"))
         pngs = files.filter(isPng)
+        expectedPngs = fs.readdirSync(relative("images/expected"))
 
         try
-            pngs.sort().should.deep.equal([
-                "1.scale-100.svg.png"
-                "1.scale-140.svg.png"
-                "1.scale-180.svg.png"
-                "1.scale-80.svg.png"
-                "2.scale-100.svg.png"
-                "2.scale-140.svg.png"
-                "2.scale-180.svg.png"
-                "2.scale-80.svg.png"
-            ])
+            pngs.sort().should.deep.equal(expectedPngs)
 
             pngs.forEach (png) =>
                 expected = fs.readFileSync(relative("images/expected/" + png)).toString()

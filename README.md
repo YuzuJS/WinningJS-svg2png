@@ -34,19 +34,24 @@ grunt.initConfig({
 It will automatically create PNG images as siblings to the SVGs specified in the configuration. That is, if you have
 a file at `images/foo.svg`, WinningJS-svg2png will create:
 
-* `images/foo.scale-80.svg.png`
-* `images/foo.scale-100.svg.png`
-* `images/foo.scale-140.svg.png`
-* `images/foo.scale-180.svg.png`
+* `images/foo.svg.scale-80.png`
+* `images/foo.svg.scale-100.png`
+* `images/foo.svg.scale-140.png`
+* `images/foo.svg.scale-180.png`
 
-You'll probably want to add the generated files to your `.gitignore` or similar; a good entry would be `*.svg.png`.
+Then you can reference them with URLs like `ms-appx:///images/foo.svg.png`. The future is here!
+
+## Housekeeping
+
+You'll probably want to add the generated files to your `.gitignore` or similar; a good entry would be
+`*.svg.scale-*.png`.
 
 You'll also need to be sure Visual Studio (or MSBuild, more accurately) is aware of these files and includes them in
 your package output. To do this, edit your `.jsproj` file (e.g. in Notepad). Find the main `<ItemGroup>` section, and
 add a line like
 
 ```xml
-<Content Include="images\**\*.svg" />
+<Content Include="images\**\*.svg.scale-*.png" />
 ```
 
 For more general steps on integrating Grunt into a Windows 8 App's build process, check out the [WinningJS-build][]
