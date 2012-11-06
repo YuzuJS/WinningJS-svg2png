@@ -14,8 +14,6 @@ module.exports = function (grunt) {
 
         var svgs = grunt.file.expandFiles(config);
 
-        Q.all(svgs.map(svgToWin8Pngs)).then(function () {
-            done();
-        }).end();
+        Q.all(svgs.map(svgToWin8Pngs)).thenResolve().done(done);
     });
 };
