@@ -7,13 +7,9 @@ var name = "WinningJS-svg2png";
 var description = require("../package.json").description;
 
 module.exports = function (grunt) {
-    grunt.registerTask(name, description, function () {
-        this.requiresConfig(name);
+    grunt.registerMultiTask(name, description, function () {
         var done = this.async();
-        var config = grunt.config(name);
 
-        var svgs = grunt.file.expandFiles(config);
-
-        Q.all(svgs.map(svgToWin8Pngs)).thenResolve().done(done);
+        Q.all(this.filesSrc.map(svgToWin8Pngs)).thenResolve().done(done);
     });
 };
