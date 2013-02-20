@@ -1,2 +1,0 @@
-#!/usr/bin/env node
-require("grunt").npmTasks("winningjs-sv2png").cli();
