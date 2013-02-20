@@ -10,7 +10,7 @@ users can't use SVGs at all!
 
 This, obviously, sucks.
 
-But there's hope! Continuing the fine tradition of WinningJS projects making Windows 8 App development suck less™,
+But there's hope! Continuing the fine tradition of WinningJS projects Making Windows 8 App Development Suck Less™,
 **WinningJS-svg2png** gives you a nice [Grunt][] plugin for your build process to convert SVGs to PNGs in all the
 appropriate sizes. That way you can continue authoring using SVGs, and just use `.svg.png` instead of `.svg` when
 referencing the image in your code to get the correctly-scaled image automatically supplied.
@@ -27,7 +27,7 @@ You'll want to have set up a Gruntfile for your project. Inside of it, you regis
 grunt.loadNpmTasks("winningjs-svg2png");
 
 grunt.initConfig({
-    "WinningJS-svg2png": ["images\**\*.svg"]
+    "WinningJS-svg2png": ["images/**/*.svg"]
 });
 ```
 
