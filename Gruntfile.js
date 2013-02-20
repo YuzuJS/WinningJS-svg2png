@@ -6,10 +6,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-clean");
 
     grunt.initConfig({
-        "WinningJS-svg2png": ["test/images/*.svg"],
+        "winningjs-svg2png": ["test/images/*.svg"],
         clean: ["test/images/*.png"],
         simplemocha: ["test/*.coffee"]
     });
 
-    grunt.registerTask("test", ["clean", "WinningJS-svg2png", "simplemocha", "clean"]);
+    grunt.registerTask("test", ["clean", "winningjs-svg2png", "simplemocha", "clean"]);
 };

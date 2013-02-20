@@ -3,7 +3,7 @@
 var Q = require("q");
 var svgToWin8Pngs = require("../lib/svgToWin8Pngs");
 
-var name = "WinningJS-svg2png";
+var name = require("../package.json").name;
 var description = require("../package.json").description;
 
 module.exports = function (grunt) {

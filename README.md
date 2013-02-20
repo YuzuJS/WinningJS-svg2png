@@ -27,7 +27,7 @@ You'll want to have set up a Gruntfile for your project. Inside of it, you regis
 grunt.loadNpmTasks("winningjs-svg2png");
 
 grunt.initConfig({
-    "WinningJS-svg2png": ["images/**/*.svg"]
+    "winningjs-svg2png": ["images/**/*.svg"]
 });
 ```
 
